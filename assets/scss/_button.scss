@@ -1,0 +1,28 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 46px;
+    height: 40px;
+    padding: 0 46px;
+    min-width: 230px;
+    font-family: $font-roboto;
+
+    &-primary {
+        color: $white;
+        background-color: $primary;
+    }
+
+    &-secondary {
+        color: $primary;
+        background-color: $white;
+    }
+
+    &-rounded {
+        background-color: #8846f4;
+        color: $white;
+    }
+}

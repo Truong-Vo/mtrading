@@ -1,0 +1,137 @@
+&-menu {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    border-bottom: 1px solid #eee;
+    flex: 1;
+    font-family: $font-opensans;
+}
+&-brand {
+    margin-right: 33px;
+}
+
+&-menu {
+}
+
+&-menu__item {
+    font-size: 1.4rem;
+    line-height: 20px;
+    font-weight: 400;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        opacity: 0;
+        height: 1px;
+        left: 0;
+        top: 34px;
+    }
+
+    &:hover {
+        color: $hover;
+    }
+
+    &:hover::after {
+        background-color: $link;
+        width: 100%;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+}
+
+&-language {
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+
+    &:hover .header-language__list {
+        visibility: visible;
+        animation: rotateDropDown 0.6s forwards 0.2s;
+        -webkit-animation: rotateDropDown 0.6s forwards 0.2s;
+    }
+}
+
+&-language__flag {
+    margin-right: 6px;
+    vertical-align: baseline;
+}
+
+&-language__label {
+    font-size: 1.6rem;
+    color: $link;
+    &:hover {
+        border-bottom: 1px solid $link;
+    }
+}
+
+&-language__list {
+    will-change: transform;
+    position: absolute;
+    top: calc(100% + 35px);
+    left: 0;
+    min-width: 250px;
+    background-color: $white;
+    border-radius: 2px;
+    z-index: 1;
+    padding: 8px 0;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top left;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -35px;
+        width: 100%;
+        height: 35px;
+    }
+}
+
+&-language__item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 4px 24px;
+    line-height: 24px;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: #f8f9fa;
+    }
+}
+
+&-language__item .header-language__label {
+    color: #16181b;
+
+    &:hover {
+        border: none;
+    }
+}
+
+&-auth {
+    margin-left: 68px;
+}
+
+&-auth__login {
+}
+
+&-auth__account {
+    display: inline-block;
+    font-size: 1.2rem;
+    min-width: 126px;
+    line-height: 20px;
+    width: auto;
+    margin-left: 20px;
+    padding: 4px 16px;
+    border: 2px solid rgb(129, 129, 141);
+    letter-spacing: -0.3px;
+    border-radius: 4px;
+    font-weight: 700;
+}

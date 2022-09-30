@@ -1,0 +1,10 @@
+.coppytrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-content {
+        max-width: 640px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+.benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px;
+    margin: 40px 0 110px;
+
+    &-item__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+            width: 47px;
+            height: 33px;
+        }
+        p {
+            margin-top: 12px;
+            color: $heading;
+            font-size: 1.8rem;
+            white-space: initial;
+            text-align: center;
+            font-family: $font-roboto;
+            font-weight: 400;
+            letter-spacing: normal;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
