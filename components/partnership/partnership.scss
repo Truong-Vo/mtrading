@@ -1,0 +1,45 @@
+.partnership {
+    padding: 32px 0;
+    font-family: $font-roboto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-shrink: 100%;
+
+    &-content {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    &-heading {
+        color: $link;
+        margin-bottom: 20px;
+        font-size: 2.8rem;
+        line-height: 40px;
+        letter-spacing: normal;
+
+        span {
+            color: $primary;
+        }
+    }
+    &-desc {
+        font-size: 1.6rem;
+        color: $text;
+        line-height: 24px;
+        letter-spacing: normal;
+    }
+    &-graph {
+        margin-top: 20px;
+    }
+    &-img {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    &-button {
+        width: 425px;
+        margin-left: 140px;
+        margin-top: 20px;
+    }
+}

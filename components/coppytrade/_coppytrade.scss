@@ -1,0 +1,93 @@
+.coppytrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-content {
+        max-width: 640px;
+        width: 100%;
+
+        &__heading {
+            color: $link;
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+
+            span {
+                color: $primary;
+            }
+        }
+
+        &__desc {
+            color: $text;
+            line-height: 24px;
+            font-size: 1.6rem;
+            letter-spacing: normal;
+            font-family: $font-roboto;
+        }
+    }
+
+    &-benefits {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 40px;
+        font-family: $font-opensans;
+    }
+
+    &-benefits__item {
+        display: flex;
+        align-items: center;
+        min-width: 640px;
+
+        &:not(:first-of-type) {
+            margin-top: 24px;
+        }
+
+        &-icon {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            margin-right: 20px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f6efff;
+            position: relative;
+            // border-top: 1px solid #000;
+            // transform: rotate(270deg);
+
+            &::before {
+                position: absolute;
+                content: '';
+                background-color: transparent;
+                inset: 0;
+                z-index: -1;
+                margin: -2px;
+                border-radius: inherit;
+                animation: spin 5s forwards;
+            }
+        }
+
+        &-step {
+            h3 {
+                color: $heading;
+                font-size: 2.4rem;
+                letter-spacing: normal;
+                line-height: 32px;
+            }
+            p {
+                font-size: 1.6rem;
+                line-height: 24px;
+                letter-spacing: normal;
+                color: #212529;
+            }
+        }
+    }
+
+    &-button {
+        margin-top: 40px;
+        max-width: 380px;
+    }
+}

@@ -1,0 +1,36 @@
+.news {
+    &-heading {
+        color: $link;
+        margin-bottom: 20px;
+        font-size: 2.8rem;
+        line-height: 40px;
+        letter-spacing: normal;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        font-family: $font-opensans;
+        width: 100%;
+    }
+    &-item {
+        &__image {
+            border-radius: 8px;
+            height: 209px;
+            object-fit: cover;
+        }
+        &__author {
+            margin-top: 12px;
+            font-size: 1.6rem;
+            color: $link;
+        }
+        &__desc {
+            white-space: initial;
+            font-size: 2rem;
+            line-height: 32px;
+            color: $hover;
+            margin-top: 5px;
+        }
+    }
+}

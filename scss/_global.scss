@@ -71,3 +71,35 @@ img {
         opacity: 0;
     }
 }
+
+@keyframes spin {
+    0% {
+        border: 2px transparent;
+    }
+
+    25% {
+        border-top: 2px solid red;
+        transition: border-top 2s transform(rotate(90deg));
+    }
+
+    50% {
+        border-top: 2px solid red;
+        border-right: 2px solid red;
+        transition: border-right 4s transform(rotate(180deg));
+    }
+
+    75% {
+        border-top: 2px solid red;
+        border-right: 2px solid red;
+        border-bottom: 2px solid red;
+        transition: border-bottom 6s transform(rotate(270deg));
+    }
+
+    100% {
+        border-top: 2px solid red;
+        border-right: 2px solid red;
+        border-bottom: 2px solid red;
+        border-left: 2px solid red;
+        transition: border-left 8s transform(rotate(270deg));
+    }
+}

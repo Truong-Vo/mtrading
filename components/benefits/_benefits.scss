@@ -11,10 +11,6 @@
         justify-content: center;
         flex-direction: column;
 
-        img {
-            width: 47px;
-            height: 33px;
-        }
         p {
             margin-top: 12px;
             color: $heading;
@@ -28,5 +24,11 @@
                 text-decoration: underline;
             }
         }
+    }
+    &-item__icon {
+        min-height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
