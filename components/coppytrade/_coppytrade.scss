@@ -55,17 +55,6 @@
             justify-content: center;
             background-color: #f6efff;
             position: relative;
-
-            &::before {
-                position: absolute;
-                content: '';
-                background-color: transparent;
-                inset: 0;
-                z-index: -1;
-                margin: -2px;
-                border-radius: inherit;
-                animation: spin 5s forwards;
-            }
         }
 
         &-step {
@@ -79,8 +68,30 @@
                 font-size: 1.6rem;
                 line-height: 24px;
                 letter-spacing: normal;
-                color: #212529;
+                color: #212526;
             }
+        }
+
+        // handle delay circle loading
+
+        &:nth-of-type(1) .coppytrade-left .coppytrade-rotate,
+        &:nth-of-type(1) .coppytrade-right .coppytrade-rotate {
+            -webkit-animation-delay: 0;
+        }
+
+        &:nth-of-type(2) .coppytrade-left .coppytrade-rotate,
+        &:nth-of-type(2) .coppytrade-right .coppytrade-rotate {
+            -webkit-animation-delay: 6s;
+        }
+
+        &:nth-of-type(3) .coppytrade-left .coppytrade-rotate,
+        &:nth-of-type(3) .coppytrade-right .coppytrade-rotate {
+            -webkit-animation-delay: 12s;
+        }
+
+        &:nth-of-type(4) .coppytrade-left .coppytrade-rotate,
+        &:nth-of-type(4) .coppytrade-right .coppytrade-rotate {
+            -webkit-animation-delay: 18s;
         }
     }
 
@@ -116,5 +127,37 @@
                 }
             }
         }
+    }
+
+    // handle animation circle loading
+
+    &-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip: rect(0, 52px, 52px, 26px);
+    }
+
+    &-right {
+        top: 0;
+        left: 0;
+        position: absolute;
+        clip: rect(0px, 26px, 52px, 0px);
+    }
+    &-rotate {
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        position: absolute;
+        opacity: 0.5;
+        border: 2px solid #bdabf0;
+    }
+    &-left .coppytrade-rotate {
+        clip: rect(0px, 26px, 52px, 0px);
+        -webkit-animation: rotate-left 6s both linear;
+    }
+    &-right .coppytrade-rotate {
+        clip: rect(0, 52px, 52px, 26px);
+        -webkit-animation: rotate-right 6s both linear;
     }
 }

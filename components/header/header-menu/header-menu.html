@@ -1,7 +1,21 @@
-<div class="header-menu">
+<div class="header-menus">
+    <div class="header-mobile__menu">
+        <img
+            class="header-mobile__menu--open"
+            src="https://mtr-cdn.com/img/mtweb/general/icons/burger-dark.svg"
+            alt=""
+        />
+        <img
+            class="header-mobile__menu--close"
+            src="https://mtr-cdn.com/img/mtweb/general/icons/close-dark.svg"
+            alt=""
+        />
+    </div>
     <a class="header-brand" href="#!">
-        <img src="https://mtr-cdn.com/img/mtweb/general/color-logo.svg" alt="" />
+        <img src="https://mtr-cdn.com/img/mtweb/general/color-logo.svg" class="header-brand__desktop" alt="" />
+        <img src="https://mtr-cdn.com/img/mtweb/general/color-logo__mobile.svg" class="header-brand__mobile" />
     </a>
+
     <div class="header-menu">
         <a href="#!" class="header-menu__item">News</a>
         <a href="#!" class="header-menu__item">Market Insights</a>
@@ -17,4 +31,60 @@
         <a href="#!" class="header-auth__login">Login</a>
         <a href="#!" class="header-auth__account">Open Account</a>
     </div>
+</div>
+<!-- menu mobile -->
+<div class="header-overlay">
+    <ul class="header-mobile__list">
+        <li class="header-mobile__item">
+            <a href="#!">News</a>
+        </li>
+        <li class="header-mobile__item">
+            <a href="#!">Market Insights</a>
+        </li>
+        <li class="header-mobile__item">
+            <a href="#!">Education</a>
+        </li>
+        <li class="header-mobile__item">
+            <a href="#!">FAQ</a>
+        </li>
+        <li class="header-mobile__item">
+            <span class="header-mobile__show">Partnership<i class="fa-solid fa-caret-down"></i></span>
+            <ul class="header-mobile__submenu">
+                <li class="header-mobile__submenu--item"><a href="#!">Partnership</a></li>
+                <li class="header-mobile__submenu--item"><a href="#!">DW reward</a></li>
+            </ul>
+        </li>
+        <li class="header-mobile__item">
+            <span class="header-mobile__show active">Promotions<i class="fa-solid fa-caret-down"></i></span>
+            <ul class="header-mobile__submenu">
+                <li class="header-mobile__submenu--item"><a href="#!">Deposit bonus 200%</a></li>
+            </ul>
+        </li>
+        <li class="header-mobile__item">
+            <span class="header-mobile__show">Start Trading<i class="fa-solid fa-caret-down"></i></span>
+            <ul class="header-mobile__submenu">
+                <li class="header-mobile__submenu--item"><a href="#!">Account types</a></li>
+                <li class="header-mobile__submenu--item"><a href="#!">Contract Specifications</a></li>
+                <li class="header-mobile__submenu--item"><a href="#!">Margin Requirements</a></li>
+                <li class="header-mobile__submenu--item"><a href="#!">Payment Systems</a></li>
+            </ul>
+        </li>
+        <li class="header-mobile__item">
+            <a href="#!">Trading Platforms</a>
+        </li>
+        <li class="header-mobile__item">
+            <span class="header-mobile__show">Social Trading<i class="fa-solid fa-caret-down"></i></span>
+            <ul class="header-mobile__submenu">
+                <li class="header-mobile__submenu--item"><a href="#!">Copy Masters</a></li>
+                <li class="header-mobile__submenu--item"><a href="#!">Copiers</a></li>
+            </ul>
+        </li>
+        <li class="header-mobile__item">
+            <span class="header-mobile__show">About Us<i class="fa-solid fa-caret-down"></i></span>
+
+            <ul class="header-mobile__submenu">
+                <li class="header-mobile__submenu--item"><a href="#!">Our Brand Book</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>

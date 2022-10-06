@@ -68,3 +68,11 @@ const htmls = languages.map((language) => {
 });
 
 $('.header-language__list').innerHTML = htmls.join('');
+
+// Handle event Menu
+
+const showMenu = $$('.header-mobile__item');
+
+showMenu.forEach((e) => {
+    e.classList.toggle('active');
+});

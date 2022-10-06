@@ -1,16 +1,89 @@
-&-menu {
+&-menus {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 48px;
     border-bottom: 1px solid #eee;
     flex: 1;
     font-family: $font-opensans;
+    position: relative;
 }
 &-brand {
     margin-right: 33px;
+
+    &__mobile {
+        display: none;
+    }
 }
 
 &-menu {
+    flex: 1;
+}
+
+&-mobile__menu {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    display: none;
+
+    &--close {
+        position: absolute;
+        top: 0;
+        left: -3px;
+        display: none;
+    }
+}
+
+&-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $bgc;
+    display: none;
+}
+&-mobile__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+&-mobile__item {
+    display: inline-block;
+    color: $white;
+    font-size: 1.6rem;
+    line-height: 24px;
+    font-family: $font-opensans;
+    font-weight: 400;
+
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+
+    a {
+        color: $white;
+        font-size: 1.6rem;
+        line-height: 24px;
+        font-family: $font-opensans;
+        font-weight: 400;
+    }
+
+    i {
+        font-size: 1rem;
+        margin-left: 6px;
+        transform: translateY(-3px);
+    }
+}
+
+&-mobile__show.active ~ .header-mobile__submenu {
+    display: block;
+}
+
+&-mobile__submenu {
+    display: none;
+    padding-left: 12px;
+
+    &--item {
+        padding-top: 12px;
+    }
 }
 
 &-menu__item {
@@ -134,4 +207,63 @@
     letter-spacing: -0.3px;
     border-radius: 4px;
     font-weight: 700;
+}
+
+// responsive
+@media (min-width: 740px) {
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1199px) {
+    .header {
+        &-brand {
+            height: 20px;
+            width: 104px;
+            flex: 1;
+        }
+
+        &-menus {
+            height: 56px;
+            padding: 0 24px;
+        }
+        &-menu {
+            display: none;
+        }
+
+        &-submenu {
+            display: none;
+        }
+
+        &-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &__content {
+                max-width: 100%;
+
+                &--text {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            &__background {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                left: auto;
+                width: 50%;
+                height: 50%;
+
+                img {
+                    background-size: 50% 50%;
+                }
+            }
+        }
+    }
 }

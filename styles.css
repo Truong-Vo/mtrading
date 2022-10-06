@@ -393,31 +393,26 @@ img {
     opacity: 0;
   }
 }
-@keyframes spin {
+@-webkit-keyframes rotate-left {
   0% {
-    border: 2px transparent;
-  }
-  25% {
-    border-top: 2px solid red;
-    transition: border-top 2s transform(rotate(90deg));
+    -webkit-transform: rotate(0deg);
   }
   50% {
-    border-top: 2px solid red;
-    border-right: 2px solid red;
-    transition: border-right 4s transform(rotate(180deg));
-  }
-  75% {
-    border-top: 2px solid red;
-    border-right: 2px solid red;
-    border-bottom: 2px solid red;
-    transition: border-bottom 6s transform(rotate(270deg));
+    -webkit-transform: rotate(180deg);
   }
   100% {
-    border-top: 2px solid red;
-    border-right: 2px solid red;
-    border-bottom: 2px solid red;
-    border-left: 2px solid red;
-    transition: border-left 8s transform(rotate(270deg));
+    -webkit-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes rotate-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
   }
 }
 .btn {
@@ -445,16 +440,81 @@ img {
   color: #fff;
 }
 
-.header-menu {
+.header-menus {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 48px;
   border-bottom: 1px solid #eee;
   flex: 1;
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 .header-brand {
   margin-right: 33px;
+}
+.header-brand__mobile {
+  display: none;
+}
+.header-menu {
+  flex: 1;
+}
+.header-mobile__menu {
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  display: none;
+}
+.header-mobile__menu--close {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  display: none;
+}
+.header-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #371053;
+  display: none;
+}
+.header-mobile__list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.header-mobile__item {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.header-mobile__item:not(:first-child) {
+  margin-top: 12px;
+}
+.header-mobile__item a {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.header-mobile__item i {
+  font-size: 1rem;
+  margin-left: 6px;
+  transform: translateY(-3px);
+}
+.header-mobile__show.active ~ .header-mobile__submenu {
+  display: block;
+}
+.header-mobile__submenu {
+  display: none;
+  padding-left: 12px;
+}
+.header-mobile__submenu--item {
+  padding-top: 12px;
 }
 .header-menu__item {
   font-size: 1.4rem;
@@ -559,6 +619,47 @@ img {
   border-radius: 4px;
   font-weight: 700;
 }
+@media (max-width: 1199px) {
+  .header .header-brand {
+    height: 20px;
+    width: 104px;
+    flex: 1;
+  }
+  .header .header-menus {
+    height: 56px;
+    padding: 0 24px;
+  }
+  .header .header-menu {
+    display: none;
+  }
+  .header .header-submenu {
+    display: none;
+  }
+  .header .header-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header .header-slide__content {
+    max-width: 100%;
+  }
+  .header .header-slide__content--text {
+    width: 100%;
+    text-align: center;
+  }
+  .header .header-slide__background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: auto;
+    width: 50%;
+    height: 50%;
+  }
+  .header .header-slide__background img {
+    background-size: 50% 50%;
+  }
+}
 .header-slide {
   background: linear-gradient(257.74deg, #6b249e 37.42%, #9048c5 80.7%);
   height: 448px;
@@ -566,14 +667,12 @@ img {
   text-align: left;
   width: 100%;
   flex-basis: 100%;
-}
-.header-slide__wrap {
   position: relative;
-  overflow: hidden;
 }
 .header-slide__content {
   max-width: 600px;
   position: relative;
+  height: 100%;
 }
 .header-slide__content--text {
   animation: crossBanners 12s infinite ease-in-out;
@@ -789,16 +888,6 @@ img {
   background-color: #f6efff;
   position: relative;
 }
-.coppytrade-benefits__item-icon::before {
-  position: absolute;
-  content: "";
-  background-color: transparent;
-  inset: 0;
-  z-index: -1;
-  margin: -2px;
-  border-radius: inherit;
-  animation: spin 5s forwards;
-}
 .coppytrade-benefits__item-step h3 {
   color: #4f118f;
   font-size: 2.4rem;
@@ -809,7 +898,19 @@ img {
   font-size: 1.6rem;
   line-height: 24px;
   letter-spacing: normal;
-  color: #212529;
+  color: #212526;
+}
+.coppytrade-benefits__item:nth-of-type(1) .coppytrade-left .coppytrade-rotate, .coppytrade-benefits__item:nth-of-type(1) .coppytrade-right .coppytrade-rotate {
+  -webkit-animation-delay: 0;
+}
+.coppytrade-benefits__item:nth-of-type(2) .coppytrade-left .coppytrade-rotate, .coppytrade-benefits__item:nth-of-type(2) .coppytrade-right .coppytrade-rotate {
+  -webkit-animation-delay: 6s;
+}
+.coppytrade-benefits__item:nth-of-type(3) .coppytrade-left .coppytrade-rotate, .coppytrade-benefits__item:nth-of-type(3) .coppytrade-right .coppytrade-rotate {
+  -webkit-animation-delay: 12s;
+}
+.coppytrade-benefits__item:nth-of-type(4) .coppytrade-left .coppytrade-rotate, .coppytrade-benefits__item:nth-of-type(4) .coppytrade-right .coppytrade-rotate {
+  -webkit-animation-delay: 18s;
 }
 .coppytrade-button {
   margin-top: 40px;
@@ -838,6 +939,34 @@ img {
 }
 .coppytrade-background__video video:nth-of-type(4) {
   animation-delay: 18s;
+}
+.coppytrade-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip: rect(0, 52px, 52px, 26px);
+}
+.coppytrade-right {
+  top: 0;
+  left: 0;
+  position: absolute;
+  clip: rect(0px, 26px, 52px, 0px);
+}
+.coppytrade-rotate {
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.5;
+  border: 2px solid #bdabf0;
+}
+.coppytrade-left .coppytrade-rotate {
+  clip: rect(0px, 26px, 52px, 0px);
+  -webkit-animation: rotate-left 6s both linear;
+}
+.coppytrade-right .coppytrade-rotate {
+  clip: rect(0, 52px, 52px, 26px);
+  -webkit-animation: rotate-right 6s both linear;
 }
 
 .deposit {

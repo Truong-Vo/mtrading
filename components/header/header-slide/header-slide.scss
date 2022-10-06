@@ -5,16 +5,13 @@
     text-align: left;
     width: 100%;
     flex-basis: 100%;
-
-    &__wrap {
-        position: relative;
-        overflow: hidden;
-    }
+    position: relative;
 }
 
 &-slide__content {
     max-width: 600px;
     position: relative;
+    height: 100%;
 }
 
 &-slide__content--text {
