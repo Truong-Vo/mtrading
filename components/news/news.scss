@@ -1,4 +1,5 @@
 .news {
+    padding-bottom: 45px;
     &-heading {
         color: $link;
         margin-bottom: 20px;
@@ -31,6 +32,9 @@
             line-height: 32px;
             color: $hover;
             margin-top: 5px;
+        }
+        &:hover .news-item__desc {
+            text-decoration: underline;
         }
     }
 }
