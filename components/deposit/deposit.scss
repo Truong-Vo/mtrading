@@ -18,7 +18,7 @@
     &-desc {
         font-size: 1.6rem;
         color: $text;
-        width: 600px;
+        max-width: 600px;
         line-height: 24px;
         letter-spacing: normal;
     }
@@ -99,6 +99,30 @@
             opacity: 0;
             transition: all 0.2s ease-in;
             width: 236px;
+        }
+    }
+}
+
+// responsive
+
+@media (min-width: 1200px) {
+    .header {
+    }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+    .header {
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+    }
+}
+
+@media (max-width: 575px) {
+    .deposit {
+        padding: 16px;
+        &-payment {
+            flex-wrap: wrap;
         }
     }
 }

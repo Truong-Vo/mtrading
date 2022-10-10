@@ -69,10 +69,27 @@ const htmls = languages.map((language) => {
 
 $('.header-language__list').innerHTML = htmls.join('');
 
-// Handle event Menu
+// Handle event items
 
-const showMenu = $$('.header-mobile__item');
+const showMenu = $$('.header-mobile__show');
 
-showMenu.forEach((e) => {
-    e.classList.toggle('active');
+showMenu.forEach((element) => {
+    element.onclick = function () {
+        const itemActive = $('.header-mobile__show.active');
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
+        } else if (itemActive) {
+            itemActive.classList.remove('active');
+            element.classList.add('active');
+        } else {
+            element.classList.add('active');
+        }
+    };
 });
+
+// show menu list
+
+$('.header-mobile__menu').onclick = function () {
+    this.classList.toggle('open');
+    $('.header-overlay').classList.toggle('active');
+};

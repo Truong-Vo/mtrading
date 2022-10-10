@@ -10,7 +10,7 @@
     &-list {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 32px;
         font-family: $font-opensans;
         width: 100%;
@@ -35,6 +35,36 @@
         }
         &:hover .news-item__desc {
             text-decoration: underline;
+        }
+    }
+}
+
+// responsive
+
+@media (min-width: 1200px) {
+    .header {
+    }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+    .header {
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+    }
+}
+
+@media (max-width: 575px) {
+    .news {
+        padding: 16px;
+        &-list {
+            flex-direction: column;
+        }
+        &-item {
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

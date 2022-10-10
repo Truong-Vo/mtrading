@@ -43,3 +43,30 @@
         margin-top: 20px;
     }
 }
+
+// responsive
+
+@media (min-width: 1200px) {
+    .header {
+    }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+    .header {
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+    }
+}
+
+@media (max-width: 575px) {
+    .partnership {
+        padding: 16px;
+        flex-direction: column;
+
+        &-button {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
