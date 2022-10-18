@@ -1,0 +1,208 @@
+.auths {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &-content {
+        display: flex;
+        border-radius: 12px;
+        border: 2px solid #e8e8e8;
+        width: 1064px;
+    }
+
+    &-logo {
+        height: 37px;
+    }
+    &-tabs {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 18px;
+        border-bottom: 2px solid #e8e8e8;
+        margin: 52px 0 24px;
+        p {
+            margin-right: 24px;
+            padding-bottom: 10px;
+            margin-bottom: -2px;
+            color: #c3b1cc;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                color: #85439a;
+            }
+        }
+    }
+
+    &-tabs > p.active {
+        color: #85439a;
+        border-bottom: 2px solid #85439a;
+    }
+
+    &-form {
+        max-width: 560px;
+        padding: 48px;
+        width: 100%;
+        border-radius: inherit;
+
+        &__login {
+            display: none;
+        }
+        &__registration {
+            display: none;
+        }
+        &__group {
+            margin-bottom: 16px;
+            width: 100%;
+        }
+        &__label {
+            display: block;
+            margin-bottom: 8px;
+            color: #595964;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        &__input {
+            width: 100%;
+            height: 56px;
+            background-color: #fff;
+            color: #81818d;
+            border: 1px solid;
+            border-color: #dde0e9;
+            border-radius: 8px;
+            font-family: $font-opensans;
+            font-weight: 500;
+            padding-left: 16px;
+            font-size: 16px;
+            line-height: 24px;
+            padding-right: 16px;
+
+            &::placeholder {
+                color: #81818d;
+                font-weight: 500;
+            }
+
+            &:focus {
+                border-color: #701bc8;
+            }
+        }
+    }
+
+    &-form__login.active {
+        display: block;
+    }
+
+    &-form__registration.active {
+        display: block;
+    }
+
+    button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
+
+    &-submit > a.auths-register {
+    }
+
+    &-message {
+        color: #ff5732;
+        margin-top: 4px;
+        font-size: 1.2rem;
+        line-height: 20px;
+        font-family: $font-opensans;
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &-login {
+        height: 56px;
+        border-radius: 6px;
+        font-size: 1.6rem;
+    }
+
+    &-register {
+        height: 56px;
+        border-radius: 6px;
+        font-size: 1.6rem;
+        min-width: 100%;
+    }
+    &-policy {
+        font-size: 1.2rem;
+        line-height: 20px;
+        color: #c8c8d5;
+        font-family: $font-roboto;
+        margin-top: 24px;
+    }
+    &-benefits {
+        max-width: 504px;
+        width: 100%;
+        padding: 50px 35px 65px 55px;
+        background-color: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: inherit;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 24px;
+            width: 78px;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            font-size: 2rem;
+            line-height: 28px;
+            font-weight: 500;
+            font-family: $font-roboto;
+            color: $black;
+        }
+    }
+}
+
+// responsive
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+}
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+@media (max-width: 575px) {
+    .auths {
+        &-content {
+            flex-direction: column;
+            border: none;
+            height: 100%;
+        }
+
+        &-benefits {
+            display: none;
+        }
+
+        &-form {
+            padding: 40px 32px;
+        }
+
+        &-button {
+            flex-direction: column;
+        }
+        &-submit {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

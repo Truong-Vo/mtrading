@@ -145,12 +145,34 @@
     }
 }
 @media (min-width: 768px) and (max-width: 1119px) {
-    .header {
+    .footer {
+        &-top {
+            padding-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        &-top__links {
+            flex: 1;
+        }
+
+        &-top__verify {
+            width: 160px;
+            margin-left: unset;
+        }
+        &-top__fincom {
+            width: 160px;
+            margin-left: unset;
+        }
+        &-bottom__links {
+            flex-direction: column;
+        }
+
+        &-bottom__link--list {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-    .header {
-    }
 }
 
 @media (max-width: 575px) {
