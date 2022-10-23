@@ -36,15 +36,33 @@
 // responsive
 
 @media (min-width: 1200px) {
-    .header {
-    }
 }
 @media (min-width: 768px) and (max-width: 1119px) {
-    .header {
+    .benefits {
+        flex-wrap: wrap;
+        gap: 32px;
+        margin: 48px 15px 38px;
+        overflow: hidden;
+
+        &-item {
+            width: 140px;
+            text-align: center;
+        }
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-    .header {
+    .benefits {
+        flex-wrap: wrap;
+        gap: 32px;
+        margin: 48px auto 16px;
+        padding: 0 120px;
+        height: 260px;
+        overflow: hidden;
+
+        &-item {
+            width: 140px;
+            text-align: center;
+        }
     }
 }
 

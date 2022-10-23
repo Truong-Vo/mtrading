@@ -65,7 +65,7 @@ const margetInsight = [
     },
     {
         link: '',
-        image: '../assets/images/05.10.2e16d0ba.fill-830x41510.jpg',
+        image: '../assets/images/GOLDDaily-07102022.2e16d0ba.fill-830x415.png',
         author: 'Denis Sergienko',
         date: '2022-10-05',
         desc: 'The # 2 Swiss Bank Is in Deep Trouble',

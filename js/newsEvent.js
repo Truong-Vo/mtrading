@@ -88,7 +88,6 @@ const news = [
 
 function renderNews() {
     const items = news.map((item) => {
-        console.log(item);
         return `
         <li class="news-item">
             <a href="#!">

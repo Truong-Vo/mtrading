@@ -1,4 +1,5 @@
 const headerLanguages = $('.header-language__list');
+const showMenu = $$('.header-mobile__show');
 
 const languages = [
     {
@@ -103,11 +104,11 @@ function handleEvents() {
     };
 
     // toggle show authentication
-    if (auths) {
-        $('.register-tabs__login.active').onclick = function () {
-            console.log('a');
-            this.classList.remove('active');
-        };
-    }
+    // if (auths) {
+    //     $('.register-tabs__login.active').onclick = function () {
+    //         console.log('a');
+    //         this.classList.remove('active');
+    //     };
+    // }
 }
 handleEvents();

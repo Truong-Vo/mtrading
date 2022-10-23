@@ -105,10 +105,109 @@
 }
 @media (min-width: 768px) and (max-width: 1119px) {
     .header {
+        &-slide {
+            height: 355px;
+        }
+
+        &-slide__content {
+            padding: 16px;
+            max-width: 100%;
+        }
+
+        &-slide__text {
+            max-width: 100%;
+            flex-direction: column;
+
+            &--wrap {
+                width: 100%;
+                text-align: center;
+
+                h1 {
+                    font-size: 2rem;
+                    line-height: 28px;
+                    font-weight: 700;
+                }
+
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &-slide__background {
+            width: 360px;
+            height: 287px;
+            position: absolute;
+            margin: 48px auto 20px;
+        }
+
+        &-slide__banner {
+            width: 360px;
+            height: 170px;
+            left: 0;
+            bottom: 80px;
+        }
+
+        &-slide__button {
+            width: 100%;
+        }
+
+        &-slide__wrapper {
+            flex-direction: column;
+        }
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
     .header {
+        &-slide {
+            height: 355px;
+        }
+
+        &-slide__content {
+            padding: 16px;
+        }
+
+        &-slide__text {
+            max-width: 100%;
+            flex-direction: column;
+
+            &--wrap {
+                width: 100%;
+                text-align: center;
+
+                h1 {
+                    font-size: 2rem;
+                    line-height: 28px;
+                    font-weight: 700;
+                }
+
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &-slide__background {
+            width: 360px;
+            height: 287px;
+            position: absolute;
+            margin: 48px auto 20px;
+        }
+
+        &-slide__banner {
+            width: 360px;
+            height: 170px;
+            left: 0;
+            bottom: 80px;
+        }
+
+        &-slide__button {
+            width: 100%;
+        }
+
+        &-slide__wrapper {
+            flex-direction: column;
+        }
     }
 }
 

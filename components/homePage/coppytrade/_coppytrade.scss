@@ -165,15 +165,60 @@
 // responsive
 
 @media (min-width: 1200px) {
-    .header {
-    }
 }
 @media (min-width: 768px) and (max-width: 1119px) {
-    .header {
+    .coppytrade {
+        flex-direction: column;
+        position: relative;
+        margin-left: 15px;
+        margin-right: 15px;
+
+        &-content {
+            max-width: 100%;
+        }
+
+        &-benefits {
+            position: relative;
+            &__item {
+                display: none;
+            }
+        }
+
+        &-background {
+            width: 100%;
+            height: 100%;
+            border: 4px solid #e1e3fd;
+            border-radius: 12px;
+        }
+
+        &-button {
+            display: none;
+        }
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-    .header {
+    .coppytrade {
+        padding: 0 16px;
+        flex-direction: column;
+        position: relative;
+
+        &-benefits {
+            position: relative;
+            &__item {
+                display: none;
+            }
+        }
+
+        &-background {
+            width: 100%;
+            height: 100%;
+            border: 4px solid #e1e3fd;
+            border-radius: 12px;
+        }
+
+        &-button {
+            display: none;
+        }
     }
 }
 

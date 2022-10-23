@@ -60,7 +60,6 @@
     padding: 20px;
 }
 &-mobile__item {
-    // display: inline-block;
     color: $white;
     font-size: 1.6rem;
     line-height: 24px;
@@ -267,6 +266,44 @@
             margin-right: 0;
 
             &__desktop {
+                display: inline-block;
+            }
+
+            &__mobile {
+                display: none;
+            }
+        }
+
+        &-download__app {
+            display: block;
+        }
+
+        &-menu {
+            display: none;
+        }
+
+        &-submenu {
+            display: none;
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+        &-mobile {
+            &__menu {
+                display: inline-block;
+            }
+        }
+        &-menus {
+            height: 56px;
+            padding: 0 20px;
+        }
+        &-brand {
+            height: 20px;
+            flex: 1;
+            margin-right: 0;
+
+            &__desktop {
                 display: none;
             }
 
@@ -288,10 +325,6 @@
         &-submenu {
             display: none;
         }
-    }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-    .header {
     }
 }
 
